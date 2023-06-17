@@ -1,0 +1,1245 @@
+body{
+    background-color: #081730!important;
+
+}
+.MusicGridListItem h4,h2,p,h1,h3,h4{
+  
+    
+}
+.MusicGridListItem {
+background: #101522;
+  color:white;
+  margin-left:100px;
+  text-align: center;
+}
+.Play img {
+    margin-left:30px;
+    margin-top:28px;
+}
+.Albumcover img {
+    margin-left:30px;
+    margin-top:15px;
+}
+.Genre p {
+    margin-left:25px;
+    margin-top:28px;
+}
+.Album p {
+    margin-left:15px;
+    margin-top:22px;
+}
+
+.Songname p{
+    margin-left:10px;
+    margin-top: 5px;
+}
+.Songname h4{
+    margin-left:10px;
+    margin-top: 10px;
+}
+
+.Album1 p {
+    margin-top:28px;
+}
+
+.Lizensieren Button {
+    margin-left:-60px;
+    margin-top:28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --background-image: url();
+    --jumbotron-color: rgb(12 17 86);
+    --playlist-items-background-color: #101522;
+    --playlist-items-background-color-on-hover: #2e3249;
+
+  }
+  body {
+    background-image: var(--background-image);
+    margin: 0px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+  }
+  /* removing all the margins from headings and paragarph */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0px;
+    color:white;
+  }
+  
+  /* nav bar styles */
+  .nav-bar {
+    height: auto;
+    width: auto;
+    background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all ease-in-out 1s;
+  }
+  /* all divs inside nav bar should be placed side by side */
+  .nav-bar > div {
+    display: inline-block;
+  }
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* website logo image */
+  .website-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    animation-name: rotating;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  
+  /* website function */
+  .website-title h3 {
+    color: rgb(165, 80, 255);
+  }
+  .title-combo > div {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  /* animation on favourite text */
+  @keyframes flexible {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotateY(360deg);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  /* favourites text styling */
+  .favs {
+    animation: flexible;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    perspective: 10000px;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
+  }
+  /* search bar styling */
+  .search-bar {
+    width: 20%;
+    position: relative;
+  }
+  /* changing the default style of the input bar */
+  .search-bar input {
+    width: 100%;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 18px;
+    border: none;
+    padding: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: all ease-in-out 0.1s;
+  }
+  /* search icon for input bar */
+  .search-ico {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  /* mic icon for input */
+  .mic-ico {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  /* search icon style*/
+  .search-bar > div:nth-child(1) {
+    display: inline-block;
+    position: absolute;
+    width: min-content;
+    left: 5%;
+    top: 10%;
+    transition: all ease-in-out 0.1s;
+  }
+  /* microphone icon styling */
+  .search-bar > div:nth-child(3) {
+    display: inline-block;
+    position: absolute;
+    width: min-content;
+    right: 0%;
+    top: 10%;
+    transition: all ease-in-out 0.1s;
+  }
+  /* when the user clicks on the search bar, there should be no blue outlining */
+  input:focus {
+    outline: none;
+  }
+  /* notification image animation */
+  @keyframes ringing_bell {
+    0% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+  /* notification bell image */
+  .notification-bell img {
+    width: 30px;
+    height: 30px;
+    animation-name: ringing_bell;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  /* profile picture of the user */
+  .profile-picture img {
+    width: 45px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  /* nav bar style is over  */
+  
+  /* ////////////////////////////////////////////////////////////////////////////////// */
+  /* main styling starts from here */
+  main {
+    width: 250%;
+    padding: 0% 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: all ease-in-out 1s;
+  }
+  /* there are two aside sections both of them will have this class 
+  (I have taken care of the re-usability of the classes and removed redundancy) */
+  .aside {
+    display: inline-block;
+    overflow: hidden;
+  }
+  /* section one of the main part */
+  .section-1 {
+    width: 70%;
+    height: 85vh;
+    overflow: scroll;
+  }
+  /* overflow should be scrollable but the scroll bar should be hidden*/
+  .section-1::-webkit-scrollbar {
+    display: none;
+  }
+  /* section 2 of the main part */
+  .section-2 {
+    width: 28%;
+    height: 85vh;
+    z-index: 2;
+  }
+  
+  /* aside section 1 */
+  /* jumbotron */
+  .jumbotron {
+    height: 20vw;
+    width: 100%;
+    margin-top: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--jumbotron-color);
+    margin-bottom: 40px;
+    position: relative;
+  }
+  /* image insider jumbotron */
+  .jumbotron-image {
+    height: 20vw;
+    width: 20vw;
+    background-image: linear-gradient(to bottom, transparent, rgba(20, 27, 65, 1)),
+      url();
+    background-size: cover;
+  }
+  /* right part of the jumbotron */
+  .jumbotron-detail {
+    width: 86%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-right: 12px;
+    margin-left: 12px;
+  }
+  /* descriptive part contains the descripton of the song and action part contains the follow and play buttons */
+  .descriptive-part,
+  .action-part {
+    width: 100%;
+    height: max-content;
+  }
+  /* song name and followers */
+  .song-name-main,
+  .followers {
+    display: inline-block;
+  }
+  /* song name heading properties */
+  .song-name-main h1 {
+    font-size: 2vw;
+  }
+  /* follower count */
+  .followers {
+    position: absolute;
+    right: 0%;
+    top: 5%;
+  }
+  /* self explanatory */
+  .followers,
+  .author {
+    font-size: 1.5vw;
+  }
+  /* description of the jumbotron */
+  .desc {
+    font-size: 1vw;
+    margin-bottom: 5px;
+  }
+  /* action part */
+  /* .action-part {
+  padding-top: 2vw;
+  } */
+  .action-part p {
+    font-size: 1vw;
+  }
+  .btns > button {
+    border: 0px;
+    height: 3vw;
+    width: 10vw;
+    color: white;
+    font-size: 1.2vw;
+  }
+  /* play button */
+  .btns > button:nth-child(1) {
+    background-image: linear-gradient(-19deg, red 0%, blue 100%);
+  }
+  /* follow button */
+  .btns > button:nth-child(2) {
+    background-color: transparent;
+  }
+  
+  /* particular item in the playlist */
+  .playlist-item {
+    /* height:60px;
+    width:100%; */
+    height: 8vh;
+  
+    box-sizing: border-box;
+    background-color: var(--playlist-items-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    
+    /* transition: all ease-in-out 0.1s; */
+  }
+  /* playlist item hovering effects */
+  .playlist-item:hover {
+    background-color: var(--playlist-items-background-color-on-hover);
+  }
+  /* left part if the playlist item */
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding: 0% 1%;
+  }
+  /* center part of the playlist item which contains the duration length of the song */
+  .center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    height: 100%;
+  }
+  /* right part of the playlist item, which contains icons */
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    padding-right: 2%;
+  } /* now adjusting the contents of left, center and right parts */
+  .left > div:nth-child(2) {
+    height: 80%;
+    min-width: 50px;
+    max-width: 50px;
+    margin: 0px 12% 0px 12%;
+    position: relative;
+  }
+  .left > div:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+  }
+  .left > div:nth-child(3) p {
+    color: rgb(185, 185, 185);
+  }
+  /* customizing the play button */
+  .play-btn {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.1s;
+  }
+  /* on hover effects */
+  .play-btn:hover {
+    opacity: 0.7;
+  }
+  /* adjusting fonts in the playlist items  */
+  .left div p {
+    font-size: 14px;
+  }
+  .center {
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+  }
+  .right {
+    color: rgb(185, 185, 185);
+  }
+  .right div:nth-child(2) {
+    margin-left: 27%;
+  }
+  /* second section of the page starts here */
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  /* "more" button properties */
+  label {
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 20%;
+    padding-bottom: 5px;
+    z-index: 3;
+    box-shadow: 0px 0px 2px 1px white;
+    width: 70px;
+    font-size: 20px;
+    height: 21px;
+    text-align: center;
+    background-image: linear-gradient(red, blue);
+  }
+  /* on a normal display, it will be hidden */
+  label ~ input {
+    display: none;
+  }
+  /* ASIDE SECTION -2 */
+  /* this is the first section heading of the aside section 2 */
+  .section-heading {
+    margin-top: 10px;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  /* adjusting for side by side display */
+  .section-heading div,
+  .section-heading h1 {
+    display: inline-block;
+  }
+  .section-heading h1 {
+    font-size: 23px;
+  }
+  .section-heading div {
+    position: absolute;
+    bottom: 0%;
+    right: 0px;
+    font-size: 14px;
+  }
+  
+  .list {
+    height: 36vh;
+    overflow: scroll;
+  }
+  /* hiding the scrollbar */
+  .list::-webkit-scrollbar {
+    display: none;
+  }
+  /* this is particular item in the "list  container*/
+  .list-item {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 12px;
+  }
+  /* hovering effect for the list item */
+  .list-item:hover {
+    background-color: var(--playlist-items-background-color-on-hover);
+  }
+  /* adjusting the name and image of the songs relative to their original position */
+  .list-item > div:nth-child(1) {
+    width: 100px;
+    height: 100%;
+    position: relative;
+  }
+  .list-item > div:nth-child(1) > img {
+    width: 100%;
+    height: 100%;
+  }
+  .author-name {
+    font-size: 12px;
+    color: rgb(249, 250, 246);
+  }
+  .extra {
+    text-align: right;
+    height: 100%;
+  }
+  /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  
+  /* Footer section starts here*/
+  /* this is the container for the whole footer */
+  footer {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 60px;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    z-index: 6;
+  }
+  /* footer is divided into 3 parts */
+  /* 1. first part of the footer */
+  .active-song-description {
+    /* border:1px solid white; */
+    height: 90%;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* the current song which is being played, this is the image container for that. */
+  #song-image {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+  /* current song image */
+  #song-image img {
+    width: 100%;
+    height: 100%;
+  }
+  /* heart and ban icon */
+  .heart-and-ban-icon {
+    height: 100%;
+    padding-top: 4%;
+  }
+  /* song decscription */
+  .song-desc {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  /* song name */
+  .song-desc div:nth-child(1) {
+    font-size: 14px;
+  }
+  /* song author */
+  .song-desc div:nth-child(2) {
+    font-size: 12px;
+  }
+  
+  /* 2. Second part of the footer*/
+  .player {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  /* controls is the container for all the center controls of the player */
+  .controls {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+  }
+  /* this is the song-duration slider */
+  #slider {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  /* ////////// */
+  .time {
+    margin: 0px 10px;
+  }
+  
+  /* adjusting the slider for better visuals */
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  /* for audio and main center player */
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  /* hover effect for the slider */
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  /* these are for adjusting the dimensions and default styling of the long-slider */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+  }
+  
+  /* this is the circular thumb, which can be moved across the div */
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4caf50;
+    cursor: pointer;
+  }
+  
+  /* third part of the footer */
+  /* this contains the extra icons and slider for volume */
+  /* this is also a container */
+  .extras {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .playlist-item {
+    margin-left: 100px;
+    width: 90%;
+    height: 70px;
+    
+  }
+
+  .playlist-item img {
+   height:50px;
+   width:50px;
+;
+    
+  }
+.test1 h5,p {
+   
+    margin-top: 20px;
+     
+   }
+   .test1 p {
+   
+    margin-top: 20px;
+     
+   }
+
+   .center p {
+   
+    margin-left: -350px;
+    margin-top: 20px;
+     
+   }
+
+   .playlist-item {
+   
+   border-radius: 15px;
+     
+   }
+
+
+   .tes {
+   
+    margin-left:160px;
+      
+    }
+ 
+.test3 {
+  column-width: 500px;
+  min-width:170px;
+}
+
+.test3 h5 {
+  margin-top: 20px;
+}
+
+.upper {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.upper h3{
+  text-align: center;
+  text-decoration: underline;
+
+}
+.Test87 {
+  background: transparent;
+  border-color:transparent;
+  
+}
+
+.Test87 img{
+  margin-left: -200px;
+ 
+}
+
+.fa-play {
+  color:white;
+  font-size: 2em;
+  margin-left: -100px;
+}
+
+.fa-pause {
+  color:white;
+  font-size: 2em;
+  margin-left: -110px;
+}
+
+.grid-item1 {background:#101522;
+  border-color: #101522;
+ align-items: center;
+
+
+}
+.video h2 {text-align: center;
+  color:black;
+  background:white;
+
+}
+.video1 {background:#101522;
+  border-color: #101522;
+
+
+}
+.video  {background:white;
+  border-color: white;
+
+}
+.upper1 {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  
+}
+.upper1 h2 {
+color:black;
+margin-top: 70px;
+text-align: center;
+text-decoration: underline;
+  
+}
+.upper h3 {
+text-align: center;
+    
+  }
+
+  .grid-item2 {background:white;
+    border-color: white;
+   align-items: center;
+  
+  }
+  .test-demo {
+    width:315px;
+    height:700px;
+  }
+
+/* 
+Test */
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+
+
+/*---------------------------------------------*/
+a {
+
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+	outline: none !important;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #101522;
+}
+
+/*---------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+
+ul, li {
+	margin: 0px;
+	list-style-type: none;
+}
+
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input::-webkit-input-placeholder { color: #999999; }
+input:-moz-placeholder { color: #999999; }
+input::-moz-placeholder { color: #999999; }
+input:-ms-input-placeholder { color: #999999; }
+
+textarea::-webkit-input-placeholder { color: #999999; }
+textarea:-moz-placeholder { color: #999999; }
+textarea::-moz-placeholder { color: #999999; }
+textarea:-ms-input-placeholder { color: #999999; }
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact 1 ]*/
+
+.contact1 {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+
+  background: #fff;
+  background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+  background: -o-linear-gradient(left, #0072ff, #00c6ff);
+  background: -moz-linear-gradient(left, #0072ff, #00c6ff);
+  background: linear-gradient(left, #0072ff, #00c6ff);
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-contact1 {
+  width: 1163px;
+  background: #101522;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 90px 130px 88px 148px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact1-pic {
+  width: 296px;
+}
+
+.contact1-pic img {
+  max-width: 100%;
+}
+
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact1-form {
+  width: 390px;
+}
+
+.contact1-form-title {
+  display: block;
+  font-family: Montserrat-ExtraBold;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 44px;
+}
+
+input.input1 {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px;
+}
+input.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+textarea.input1 {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+textarea.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+/*---------------------------------------------*/
+.wrap-input1 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.input1 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.shadow-input1 {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: #fff
+}
+
+.input1:focus + .shadow-input1 {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+/*---------------------------------------------*/
+.container-contact1-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact1-form-btn {
+  min-width: 193px;
+  height: 50px;
+  border-radius: 25px;
+  background: #fff;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #101522;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn i {
+  margin-left: 7px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn:hover {
+  background: #fff;
+  color:black;
+}
+
+.contact1-form-btn:hover i {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 1200px) {
+  .contact1-pic {
+    width: 33.5%;
+  }
+
+  .contact1-form {
+    width: 44%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 90px;
+  }
+
+  .contact1-pic {
+    width: 35%;
+  }
+
+  .contact1-form {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 80px;
+  }
+
+  .contact1-pic {
+    display: none;
+  }
+
+  .contact1-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-contact1 {
+    padding: 90px 15px 88px 15px;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+
+  font-family: Montserrat-Medium;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.contact1-form-title h2{
+  font-weight: 800;
+color:white;
+}
+
+  .upper{
+    height: 250px;
+    
+  }
+  .upper1 h1 {
+    color:white;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -150px;
+    
+  }
